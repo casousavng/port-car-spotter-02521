@@ -10,6 +10,12 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
 
   const scrollToSection = (id: string) => {
+    // If not on homepage, navigate first
+    if (window.location.pathname !== '/') {
+      window.location.href = `/#${id}`;
+      return;
+    }
+    
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -47,6 +53,12 @@ const Header = () => {
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
               Estatísticas
+            </button>
+            <button
+              onClick={() => scrollToSection("case-study")}
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Caso de Sucesso
             </button>
             <button
               onClick={() => scrollToSection("news")}
@@ -112,6 +124,12 @@ const Header = () => {
               className="block w-full text-left text-foreground/80 hover:text-foreground transition-colors py-2"
             >
               Estatísticas
+            </button>
+            <button
+              onClick={() => scrollToSection("case-study")}
+              className="block w-full text-left text-foreground/80 hover:text-foreground transition-colors py-2"
+            >
+              Caso de Sucesso
             </button>
             <button
               onClick={() => scrollToSection("news")}
