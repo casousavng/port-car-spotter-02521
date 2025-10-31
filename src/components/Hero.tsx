@@ -39,15 +39,17 @@ const Hero = () => {
             <Button
               size="lg"
               className="bg-background text-primary hover:bg-background/90 group text-special-bg"
+              onClick={() => window.location.href = '/comprar'}
             >
-              Agendar Demonstração
+              Comprar Acesso
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               size="lg"
               className="bg-white/20 backdrop-blur-sm text-white border-2 border-white/40 hover:bg-white/30 hover:border-white/60 transition-all"
+              onClick={() => document.getElementById('case-study')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Ver Estudo de Caso
+              Ver Caso de Sucesso
             </Button>
           </div>
 

@@ -71,8 +71,11 @@ const Header = () => {
                 <Moon className="w-5 h-5 text-foreground" />
               )}
             </button>
-            <Button className="bg-primary hover:bg-primary/90">
-              Agendar Demo
+            <Button 
+              className="bg-primary hover:bg-primary/90"
+              onClick={() => window.location.href = '/ferramenta'}
+            >
+              Aceder a Ferramenta
             </Button>
           </div>
 
@@ -122,8 +125,11 @@ const Header = () => {
             >
               Contato
             </button>
-            <Button className="w-full bg-primary hover:bg-primary/90">
-              Agendar Demo
+            <Button 
+              className="w-full bg-primary hover:bg-primary/90"
+              onClick={() => window.location.href = '/ferramenta'}
+            >
+              Aceder a Ferramenta
             </Button>
           </div>
         )}
